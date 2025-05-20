@@ -134,7 +134,7 @@ class KTSP:
       ordered_list = self.remove_pair(ordered_list[0], ordered_list)
     return self.optimal_k
 
-  def fit(self, data, labels, k_cross_val=True, k=None, verbose=False):
+  def fit(self, data, labels, k_cross_val=True, k=None, verbose=True):
     self.true_labels = deepcopy(labels)
     self.k_cross_val = k_cross_val
     if (self.k_cross_val == False and (k == None or k == 1)) or k == 1:
